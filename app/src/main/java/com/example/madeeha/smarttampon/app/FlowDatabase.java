@@ -343,21 +343,15 @@ public class FlowDatabase extends SQLiteOpenHelper {
             cursor.moveToFirst();
 
         // 4. build day object
-        int rows = cursor.getCount();
-        // 4. build day object
-        //TODO:sanitize the outputs. Maybe I should have stored them as blobs?
-        if (rows > 0) {
-            int day = Integer.parseInt(cursor.getString(0));
-            int period_len = Integer.parseInt(cursor.getString(1));
-            int cycle_len = Integer.parseInt(cursor.getString(2));
+        int day = Integer.parseInt(cursor.getString(0));
+        int period_len = Integer.parseInt(cursor.getString(1));
+        int cycle_len = Integer.parseInt(cursor.getString(2));
 
-            Log.d("getMonthData(" + id + ")", "(" + id + "," + period_len + "," + cycle_len + ")");
+        Log.d("getMonthData("+id+")", "("+ id +","+ period_len +","+ cycle_len + ")");
 
-            // 5. return day
-            int[] done = {day, period_len, cycle_len};
-            return done;
-        }
-        return new int[]{-1,-1,-1};
+        // 5. return day
+        int[] done = {day,period_len,cycle_len};
+        return done;
     }
 
     // Get All Days
