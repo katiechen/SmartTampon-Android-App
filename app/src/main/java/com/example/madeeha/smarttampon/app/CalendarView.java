@@ -1,6 +1,7 @@
 package com.example.madeeha.smarttampon.app;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
@@ -277,4 +278,8 @@ public class CalendarView extends FragmentActivity {
         }
     }
 
+    public void gotoHomePage(View view) {
+        Intent intent = new Intent(this, HomePage.class);
+        startActivity(intent);
+    }
 }

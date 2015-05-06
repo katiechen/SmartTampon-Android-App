@@ -37,4 +37,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/calendar_home"
+            android:layout_width="120dp"
+            android:layout_height="0dp"
+            android:text="Home Page"
+            android:layout_weight="1"
+            android:onClick="gotoHomePage" />
+
+    </LinearLayout>
+
 </LinearLayout>
